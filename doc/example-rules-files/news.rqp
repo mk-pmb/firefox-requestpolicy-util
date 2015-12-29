@@ -1,0 +1,9 @@
+# -*- coding: utf-8, tab-width: 2 -*-
+
+bbc.co.uk* -> bbci.co.uk*
+bbc.com* -> bbc.co.uk*
+bbc.com* -> bbci.co.uk*
+bbc.com* -> bbcimg.co.uk*
+
+cbsnews.com* -> cbsi.com*
+cbsnews.com* -> cbsistatic.com*

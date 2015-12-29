@@ -1,0 +1,20 @@
+# -*- coding: utf-8, tab-width: 2 -*-
+
+google.com*   <- google.de*
+gstatic.com*  <- google.de*
+gstatic.com*  <- google.dk*
+gstatic.com*  <- google.nl*
+gstatic.com*  <- google.ro*
+googleapis.com ^storage. ^*. <- google.com*
+googleapis.com ^storage. ^*. <- google.de*
+
+blogspot.com* -> bp.blogspot.com*
+blogspot.com* -> googleusercontent.com*
+
+youtube.com* <- youtu.be*
+youtube.com* -> ggpht.com*
+youtube.com* -> googleusercontent.com*
+youtube.com* -> googlevideo.com*
+youtube.com* -> gstatic.com*
+youtube.com* -> youtube-nocookie.com*
+youtube.com* -> ytimg.com*

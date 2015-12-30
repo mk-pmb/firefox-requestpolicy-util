@@ -25,6 +25,7 @@ function rqpol_genwl_render_json () {
 
 
 function rqpol_genwl_rules_arrays () {
+  local PROTOCOL_SCHEMES_RGX='[a-z0-9+-]+'
   sed -re '
     s~\s+~ ~g;s~^ ~~;s~ $~~
     \~^ ?(#|//|;)~d
@@ -52,7 +53,7 @@ function rqpol_genwl_rules_arrays () {
     s~^<(,?)>\s+(\S+)\s+(\S+)$~\1    { "o": {"h": "\2"}, "d": {"h": "\3"} }~
     s~(\{ )"o": \{"h": "\*"\}, ~\1~
     s~, "d": \{"h": "\*"\}( \})~\1~
-    s~(\{"h": ")(\w+)://("\})~\1", "s": "\2\3~g
+    s~(\{"h": ")('"$PROTOCOL_SCHEMES_RGX"'):(//|)("\})~\1", "s": "\2\4~g
     1!{s~^(,?)~\1\r~}
     ' | tr '\r\n' '\n\r' | sed -re 's~\r(,?)$~\1~;s~\r~¶~g'
 }

@@ -1,0 +1,19 @@
+﻿#cross-domain-acl#
+
+tld ^host.              -> host.tld
+ld ^t.t ^hos            -> host.tld
+d ^l ^t ^. ^t ^s ^o ^h  -> host.tld
+
+file://         -> file://
+:// ^file       -> file://
+/ ^file:/       -> file://
+
+git+ssh://      -> git+ssh://
+ssh://          -> ssh://
+ssh:// ^git+    -> git+ssh://
+:// ^git+ssh    -> git+ssh://
+/ ^git+ssh:/    -> git+ssh://
+
+mailto:         -> mailto:
+to: ^mail       -> mailto:
+: ^to ^mail     -> mailto:

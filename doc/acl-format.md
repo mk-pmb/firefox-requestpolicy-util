@@ -38,7 +38,7 @@ __Access rules__ are in one of these formats:
 
 Available arrows (and reverse forms):
   * `->` (`<-`): allow access
-  * `->!` (`!<-`): deny access
+  * `->!` (`!<-`): deny access -- position mnemonic: run into a wall.
 
 Arrows will never contain spaces even in future versions, but hosts can,
 so best parse the arrows first.

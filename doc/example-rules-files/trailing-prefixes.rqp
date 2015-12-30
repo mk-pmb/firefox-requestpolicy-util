@@ -1,8 +1,13 @@
 ﻿#cross-domain-acl#
 
-tld ^host.              -> host.tld
-ld ^t.t ^hos            -> host.tld
-d ^l ^t ^. ^t ^s ^o ^h  -> host.tld
+tld ^host.      -> host.tld
+ld ^t.t ^hos    -> host.tld
+
+n ^e ^v ^e ^l ^e ^. ^o ^t ^. ^p ^u  -> up.to.eleven
+t ^i ^m ^i ^l ^. ^r ^e ^p ^p ^u ^\
+    . ^o ^n ^. ^s ^i ^. ^e ^r ^e \
+    ^h ^t                           -> there.is.no.upper.limit
+
 
 file://         -> file://
 :// ^file       -> file://

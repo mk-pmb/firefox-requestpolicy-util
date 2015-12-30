@@ -29,6 +29,13 @@ function rqpol_genwl_rules_arrays () {
   sed -re '
     s~\s+~ ~g;s~^ ~~;s~ $~~
     \~^ ?(#|//|;)~d
+    : merge_lines
+    /\\$/{
+      N;s~\\\s+~~
+      s~\s+$~~
+      b merge_lines
+    }
+
     s~^(.*) (!?) ?<- (.*)$~\3 ->\2 \1~
     s~^(.* ->) ?!~! \1~
     / -> /!d

@@ -1,4 +1,4 @@
-# -*- coding: utf-8, tab-width: 2 -*-
+﻿#cross-domain-acl#
 
 bbc.co.uk* -> bbci.co.uk*
 bbc.com* -> bbc.co.uk*

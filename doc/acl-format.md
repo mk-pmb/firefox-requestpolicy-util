@@ -38,7 +38,7 @@ __Access rules__ are in one of these formats:
 
 Available arrows (and reverse forms):
   * `->` (`<-`): allow access
-  * `->!` (`!<-`): deny access -- position mnemonic: run into a wall.
+  * `->!` (`!<-`): deny access — position mnemonic: run into a wall.
 
 Arrows will never contain spaces even in future versions, but hosts can,
 so best parse the arrows first.
@@ -49,19 +49,19 @@ __Hosts (origin/destination)__ formats can be:
     (e.g. `*.host.tld`, `*.tld` or even just `*`)
   * Protocol schemes like `file://` or `git+ssh://`.
     Characters supported in protocol names:
-    `a`-`z`, `0-9`, `+`, `-`
-    (In `rqpol-genwl.sh`, `PROTOCOL_SCHEMES_RGX` should conform to this.)
+    `a`..`z`, `0`..`9`, `+`, `-`
+    * (In `rqpol-genwl.sh`, `PROTOCOL_SCHEMES_RGX` should conform to this.)
   * a composite form for easier sorting:
-    * `host.tld*` = `*.host.tld` -- trailing wildcard,
-      notice the dot is added
-    * `host.tld ^sub.` = `sub.host.tld` -- trailing prefix,
+    * `host.tld*` = `*.host.tld` — trailing wildcard,
+      notice the dot is added.
+    * `host.tld ^sub.` = `sub.host.tld` — trailing prefix,
       don't forget the dot if you want one.
 
 
 Details on trailing prefixes
 ----------------------------
   * They cannot be empty. Counter-example: `-trailing.prefix ^ ^not-a`
-  * `host.tld ^*.` = `*.host.tld` -- don't forget the dot if you want one.
+  * `host.tld ^*.` = `*.host.tld` — don't forget the dot if you want one.
   * Multiple trailing prefixes are added in reverse order:
     * `host.tld ^cdn. ^pics.` = `pics.cdn.host.tld`
   * They aren't limited to label bounds, so they don't need to end with a dot.
